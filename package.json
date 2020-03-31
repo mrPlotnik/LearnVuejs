@@ -1,11 +1,8 @@
 {
-  "name": "optimizedhtml",
-  "version": "4.1.0",
-  "description": "OptimizedHTML 4 - Start HTML Template",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "name": "learnvuejs",
+  "version": "1.0.0",
+  "description": "Learn Vue.js",
+  "main": "gulpfile.js",
   "author": "plotnik",
   "license": "ISC",
   "devDependencies": {
@@ -27,5 +24,13 @@
     "gulp-util": "^3.0.8",
     "node-bourbon": "^4.2.8",
     "vinyl-ftp": "^0.6.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrPlotnik/learnVuejs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mrPlotnik/learnVuejs/issues"
+  },
+  "homepage": "https://github.com/mrPlotnik/learnVuejs#readme"
 }
