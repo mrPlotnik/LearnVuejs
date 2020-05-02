@@ -1,0 +1,19 @@
+.container
+	.row
+		.col-12.bg-light.p-3
+			
+			#app2-4
+				
+				h2 Счетчик = {{ counter }}
+				p Обрабатываем событие click
+				button.btn.btn-secondary(v-on:click="riseCounter") Увеличить
+				hr
+				h2 Счетчик 3 = {{ counter2 }}
+				p JS прямо внутри атрибута, без описания метода
+				button.btn.btn-secondary(v-on:click="counter2++") Увеличить	
+				hr
+				h2(v-on:mouseover="on" v-on:mouseout="off") Hover
+				p JS прямо внутри атрибута, без описания метода
+				hr
+				h2(v-on:mouseover="randomColor" v-on:mouseout="offRandomColor") Hover
+				p При наведении - рандомное значение цыета фона

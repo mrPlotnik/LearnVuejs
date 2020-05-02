@@ -1,0 +1,18 @@
+.container
+	.row
+		.col-12.bg-light.p-3
+			
+			#app2-6
+				
+				h2 
+					a(href="http://google.com" target="blank" v-on:click="clickOnGoogle") Google
+				p Отмена обкрытия ссылки в новом окне, с помощью метода. Отменяем стандартное поведение. Действие события по умолчанию не будет выполненно
+
+				h2 
+					a(href="http://google.com" target="blank" v-on:click.prevent="") Google
+				p Другой способ через модификатор данного события
+
+				h2(v-on:mousemove="handlerMouseMove") 
+					|X: {{ x }} \ Y: {{ y }} 
+					span(v-on:mousemove.stop="") Не изменять
+				p Модификатор ".stop" прекращает дальнейшую передачу данного события. "event.stopPropagation();"

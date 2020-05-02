@@ -1,0 +1,13 @@
+.container
+	.row
+		.col-12.bg-light.p-3
+			
+			#app2-7
+				
+				input(type="text" v-on:keyup="alertValue")
+				p alert по нажатию Enter, через условие
+
+				hr
+
+				input(type="text" v-on:keyup.enter.space="alertValue2")
+				p alert по нажатию Enter и пробела, проще, через модификатор

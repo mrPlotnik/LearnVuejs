@@ -1,0 +1,18 @@
+.container
+	.row
+		.col-12.bg-light.p-3
+			
+			#app2-5
+				
+				h2 Счетчик = {{ counter }}
+				p Обрабатываем событие click
+				button.btn.btn-secondary(v-on:click="riseCounter(1)") Увеличить на 1
+				button.btn.btn-secondary(v-on:click="riseCounter(5)") Увеличить на 5
+				button.btn.btn-secondary(v-on:click="riseCounter(10)") Увеличить на 10
+				hr
+				h2 Счетчик = {{ counter2 }}
+				p Шаг: {{ step }}
+				button.btn.btn-secondary(v-on:click="riseCounter2(1, 'изменено на 1', $event)") Увеличить на 1
+				button.btn.btn-secondary(v-on:click="riseCounter2(5, 'изменено на 5', $event)") Увеличить на 5
+				button.btn.btn-secondary(v-on:click="riseCounter2(10, 'изменено на 10', $event)") Увеличить на 10	
+				
