@@ -1,0 +1,13 @@
+.container
+	.row
+		.col-12.bg-light.p-3
+			
+			#app2-8
+				
+				h2 
+					a(:href="url") Google
+				p v-bind:href="url" можно заменить на :href="url"
+				h2 Счетчик = {{ counter }}
+				p Обрабатываем событие click
+				button.btn.btn-secondary.mb-3(@click="counter++") +1
+				p v-on:click="counter++" можно заменить на @click="counter++"

@@ -1,0 +1,15 @@
+.container
+	.row
+		.col-12.bg-light.p-3
+			
+			#app2-9
+				
+				input(@input="inputValue = $event.target.value" :value="inputValue" type="text")
+				h2 {{ inputValue }}
+				p Two-way binding. Как сделал бы новичок
+
+				input(v-model="inputValue2" type="text")
+				h2 {{ inputValue2 }}	
+				p В Vue двустороннее связывание выполняется с использованием директивы v-model.
+
+				p Двустороннее связывание - это мощная функция, которая при правильном использовании может значительно ускорить процесс разработки. Это снижает сложность поддержания пользовательского ввода в соответствии с моделью данных приложения. 
