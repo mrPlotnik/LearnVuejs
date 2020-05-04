@@ -1,0 +1,37 @@
+.container
+	.row
+		.col-12.bg-light.p-3
+			
+			//- Инициализация приложения
+			#app02-01
+
+				//- Простой пример интерполяции
+				
+				h2 Hello {{ name }} 
+				p String
+
+				p Введите свое имя
+				//- 'v-on' - прослушка события. 'input' - события, которое будем слушать
+				//- Вся эта конструкциия 'v-on:input=""' называется деректива
+				//- 'changeName' - название метода
+				input(type="text" v-on:input="changeName")
+
+				//- Математические выражения
+				h2 Sum 25+25 = {{ 25+25 }} 
+				p Math
+				
+				//- Число
+				h2 {{ number2 }} 
+				p Number
+				
+				//- Вызов функции
+				h2 {{ sayHello() }} 
+				p Оbject method
+				
+				//- Тернарное выражение
+				h2 {{ isOk2 ? 'I am OK' : 'I am not OK!!' }} 
+				p Ternary operator
+				
+				//- Функция
+				h2 {{ string.split('').reverse().join('') }} 
+				p Function
