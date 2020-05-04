@@ -1,0 +1,21 @@
+.container
+	.row
+		.col-12.bg-light.p-3
+			
+			#app2-10
+				
+				.circle.m-5(@click="isActive = !isActive" :class="{'red' : isActive, 'green' : !isActive}")
+				p По клику меняем значение переменной isActive. 
+				p Когда isActive = true, добавляем класс .red
+				p Когда isActive = false, заменяем класс .red на .green
+				p Именно заменяем, а не дополняем
+
+				.circle.m-5(@click="isActive2 = !isActive2" :class="getCssClasses")
+				p Упрощенная запись
+
+				
+
+				.circle.m-5(:class="color")
+				input(v-model="color" type="text")
+				p Введите red, blue или green
+				p Two-Way Binding

@@ -181,3 +181,58 @@ new Vue({
 	
 })
 
+//-----------------------------------------
+// 2-10
+//-----------------------------------------
+new Vue({
+	el: '#app2-10', 
+	data: {
+		isActive: false,	
+		isActive2: false,	
+		color: ''
+	},
+	// Уже вычисленное
+	computed: {
+		getCssClasses: function() {
+			return {
+				'red' : this.isActive2,
+				'green' : !this.isActive2
+			}
+		}
+	}
+	
+})
+
+//-----------------------------------------
+// 2-11
+//-----------------------------------------
+new Vue({
+	el: '#app2-11', 
+	data: {
+		color: '#111',
+		color2: '#555',
+		color3: '#999',
+		height: 50,
+		height1: 40,
+		diameter3: 60
+	},
+	// Уже вычисленное
+	computed: {
+		circleClasses: function() {
+			return {
+				'background': this.color2, 
+				'height': this.height1 + 'px'				
+			}
+		},
+		circleClasses2: function() {
+			return {
+				'background': this.color3, 
+				'height': this.diameter3 + 'px', 
+				'width': this.diameter3 + 'px'
+			}
+		}
+	}
+	
+})
+
+

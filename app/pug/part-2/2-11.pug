@@ -1,0 +1,41 @@
+.container
+	.row
+		.col-12.bg-light.p-3
+			
+			#app2-11
+
+				.container
+					.row
+
+						.col-12
+
+							h2 Два варианта (третий мой)
+							h4 №1
+							.circle.m-3(:style="{'background': color, 'height': height + 'px', 'width': height + 'px'}")
+							hr
+							p.d-inline.mr-3 Цвет:
+							input.mb-2(v-model="color" type="text")
+							br
+							p.d-inline.mr-3 Диаметр:
+							input.mb-2(v-model="height" type="text")
+
+						.col-12
+							.circle.m-3(:style="[circleClasses, {'width': height1 + 'px'}]")
+							hr
+							h4 №2	
+							p.d-inline.mr-3 Цвет:
+							input.mb-2(v-model="color2" type="text")
+							br
+							p.d-inline.mr-3 Диаметр:
+							input.mb-2(v-model="height1" type="text")
+
+						.col-12
+							.circle.m-3(:style="circleClasses2")
+							hr
+							h4 №3	
+							p.d-inline.mr-3 Цвет:
+							input.mb-2(v-model="color3" type="text")
+							br
+							p.d-inline.mr-3 Диаметр:
+							input.mb-2(v-model="diameter3" type="text")
+		
