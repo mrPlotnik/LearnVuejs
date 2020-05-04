@@ -157,8 +157,7 @@ new Vue({
 	data: {
 		url: 'http://google.com',
 		counter: 0
-	}
-	
+	}	
 })
 
 //-----------------------------------------
@@ -169,8 +168,7 @@ new Vue({
 	data: {
 		inputValue: 'Initial Value',
 		inputValue2: 'Initial Value'
-	}
-	
+	}	
 })
 
 //-----------------------------------------
@@ -191,8 +189,7 @@ new Vue({
 				'green' : !this.isActive2
 			}
 		}
-	}
-	
+	}	
 })
 
 //-----------------------------------------
@@ -223,8 +220,7 @@ new Vue({
 				'width': this.diameter3 + 'px'
 			}
 		}
-	}
-	
+	}	
 })
 
 //-----------------------------------------
@@ -233,30 +229,13 @@ new Vue({
 new Vue({
 	el: '#app02-12', 
 	data: {
-		color: '#111',
-		color2: '#555',
-		color3: '#999',
-		height: 50,
-		height1: 40,
-		diameter3: 60
-	},
-	// Уже вычисленное
-	computed: {
-		circleClasses: function() {
-			return {
-				'background': this.color2, 
-				'height': this.height1 + 'px'				
-			}
-		},
-		circleClasses2: function() {
-			return {
-				'background': this.color3, 
-				'height': this.diameter3 + 'px', 
-				'width': this.diameter3 + 'px'
-			}
-		}
-	}
-	
+		isVisible: true,
+		isVisible2: true,
+		type: 'a'
+	},	
+	computed: {		
+		
+	}	
 })
 
 

@@ -3,3 +3,35 @@
 		.col-12.bg-light.p-3
 			
 			#app02-12
+
+				h2(v-if="isVisible") I`m visible!
+				h2(v-else) No I`m not!
+
+				p Директивы v-if и v-else
+
+				button.btn.btn-primary(@click="isVisible = !isVisible") Toggle (тумблер)
+
+				hr
+
+				h2(v-if="type === 'a'") A
+				h2(v-else-if="type === 'b'") B
+				h2(v-else-if="type === 'c'") C
+				h2(v-else) Not match
+				
+				p Введите 'a', 'b' или 'c' иначе 'Not valid'
+				input(type="text" v-model="type")
+
+				hr
+
+				h2 Группировка с помощью template
+				p Это валидно
+				
+				template(v-if="isVisible2")
+					h2 A am title
+					p.inherit Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, nihil.
+
+				template(v-else)
+					h2 Другой заголовок
+					p.inherit Другой текст
+
+				button.btn.btn-primary(@click="isVisible2 = !isVisible2") Toggle (тумблер)
