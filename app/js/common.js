@@ -232,10 +232,19 @@ new Vue({
 		isVisible: true,
 		isVisible2: true,
 		type: 'a'
-	},	
-	computed: {		
+	}
+})
+
+//-----------------------------------------
+// #app02-13
+//-----------------------------------------
+new Vue({
+	el: '#app02-13', 
+	data: {
+		isVisible: true,
+		isVisible2: true,
 		
-	}	
+	}
 })
 
 

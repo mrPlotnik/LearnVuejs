@@ -1,0 +1,17 @@
+.container
+	.row
+		.col-12.bg-light.p-3
+			
+			#app02-13
+
+				h1(v-if="isVisible") I am here!
+				h2(v-else) You can`t see me!
+				p v-if полностью стирает элемент из DOM дерева
+				button(@click='isVisible = !isVisible') Toogle
+				hr
+
+				h1(v-show="isVisible2") I am here!
+				h2(v-show="!isVisible2") You can`t see me!
+				p v-show не стирает элемент из DOM дерева, а просто визуально стирает
+
+				button(@click='isVisible2 = !isVisible2') Toogle
