@@ -284,4 +284,43 @@ new Vue({
 	}
 })
 
+//-----------------------------------------
+// #app02-15
+//-----------------------------------------
+new Vue({
+	el: '#app02-15', 
+	data: {		
+		counter: 0,
+		counter2: 0,
+		counter3: 0,
+		condition: 'Less than 3'
+	},
+	methods: {
+		add: function() {
+			this.counter++
+			this.condition = this.counter > 3 ? 'More than 3' : 'Less than 3'
+		},			
+		sub: function() {
+			this.counter--
+			this.condition = this.counter > 3 ? 'More than 3' : 'Less than 3'
+		},
 
+		add2: function() {
+			this.counter2++			
+		},	
+		sub2: function() {
+			this.counter2--			
+		},
+		result: function() {
+			console.log('Result was called')			
+			return this.counter2 > 3 ? 'More than 3' : 'Less than 3'
+		}
+	},
+
+	computed: {
+		computedResult: function() {
+			console.log('Computed result was called')
+			return this.counter2 > 3 ? 'More than 3' : 'Less than 3'
+		}
+	}
+})
