@@ -247,4 +247,41 @@ new Vue({
 	}
 })
 
+//-----------------------------------------
+// #app02-14
+//-----------------------------------------
+new Vue({
+	el: '#app02-14', 
+	data: {
+		people: [
+			'Vlad',
+			'Max',
+			'Elena',
+			'Volodya'
+		],
+		people2: [
+			'Andrey',
+			'Alena',
+			'Liza',
+			'Anton'
+		],
+		people3: [
+			'Sergey',
+			'Alla',
+			'Anna',
+			'Igor'
+		],
+		people4: [
+			{name: 'Kolyan', age: 20},
+			{name: 'Albert', age: 22},
+			{name: 'Maga', age: 45}
+		],
+		persons: {
+			name: 'PRO',
+			age: 50,
+			job: 'Frontend'
+		}			
+	}
+})
+
 

@@ -1,0 +1,65 @@
+.container
+	.row
+		.col-12.bg-light.p-3
+			
+			#app02-14
+
+				ul
+					li {{ people[0] }}
+					li {{ people[1] }}
+					li {{ people[2] }}
+
+				hr
+
+				ul
+					li(v-for="person in people2") {{ person }}
+				p in - ключевое слово	
+
+				hr
+
+				ul
+					li(v-for="(person, index) in people3") {{ index + 1 }} {{ person }}
+
+				hr
+
+				ul
+					li(v-for="(person, index) in people4") 
+						|{{ index + 1 }}. {{ person.name }} - 
+						b {{ person.age }}
+				p через . можно получить доступ к свойствам объекта
+
+				hr
+
+				ul
+					li(v-for="(person, index) in people4") 
+						|{{ index + 1 }}. {{ person.name }} - 
+						b {{ person.age }}
+				p in можно заменить на of (как в ECMAScript6). Все будет работать точно так же
+
+				hr
+
+				ol
+					li(v-for="num of 4") {{ num }}
+
+				hr
+
+				ul
+					li(v-for='value in persons') {{ value }}
+				p Значение
+
+				hr
+
+				ul
+					li(v-for='(value, key) in persons') 
+						|{{ value }} 
+						b {{ key }}
+				p Ключ и значение
+						
+				hr
+
+				ul
+					li(v-for='(value, key, index) in persons') 
+						em {{ index + 1 }} 
+						b {{ key }} 
+						|{{ value }}
+				p Индекс, ключ и значение	
