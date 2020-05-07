@@ -65,12 +65,12 @@ new Vue({
 			event.target.style.color = 'inherit'
 		},
 		randomColor: function (event) {
-		  var letters = '0123456789ABCDEF';
-		  var color = '#';
-		  for (var i = 0; i < 6; i++) {
-		    color += letters[Math.floor(Math.random() * 16)];
-		  }
-		  event.target.style.backgroundColor = color;
+			var letters = '0123456789ABCDEF';
+			var color = '#';
+			for (var i = 0; i < 6; i++) {
+				color += letters[Math.floor(Math.random() * 16)];
+			}
+			event.target.style.backgroundColor = color;
 		},
 		offRandomColor: function(event) {
 			event.target.style.backgroundColor = 'inherit'
@@ -353,35 +353,35 @@ new Vue({
 })
 
 new Vue({
-  el: '#app02-16-1',  
-  data: {
-    firstName: '',
-    lastName: '',
-    fullName: 'Enter your name'    
-  },
-  watch: {
-    firstName: function (val) {
-    	console.log('First')
-      this.fullName = val + ' ' + this.lastName
-    },
-    lastName: function (val) {
-    	console.log('Last')
-      this.fullName = this.firstName + ' ' + val
-    }
-  }
+	el: '#app02-16-1',  
+	data: {
+		firstName: '',
+		lastName: '',
+		fullName: 'Enter your name'    
+	},
+	watch: {
+		firstName: function (val) {
+			console.log('First')
+			this.fullName = val + ' ' + this.lastName
+		},
+		lastName: function (val) {
+			console.log('Last')
+			this.fullName = this.firstName + ' ' + val
+		}
+	}
 })	
 
 new Vue({
-  el: '#app02-16-2',
-  data: {
-    firstName: '',
-    lastName: ''
-  },
-  computed: {
-    fullName: function () {
-      return this.firstName + ' ' + this.lastName
-    }
-  }
+	el: '#app02-16-2',
+	data: {
+		firstName: '',
+		lastName: ''
+	},
+	computed: {
+		fullName: function () {
+			return this.firstName + ' ' + this.lastName
+		}
+	}
 })
 
 
@@ -389,54 +389,66 @@ new Vue({
 // #app02-17
 //-----------------------------------------
 var vue1 = new Vue({
-  el: '#app02-17',
-  data: {
-    title: ' Hello, I am vue! '
-  },
-  methods: {
-  	alert: function() {
-  		alert('I am from vue1')
-  	}
-  }
-  
+	el: '#app02-17',
+	data: {
+		title: 'Hello, I am vue!'
+	},
+	methods: {
+		alert: function() {
+			alert('I am from vue1')
+		}
+	}
+	
 })
 
 vue1.newField = 'Random text'
 
 new Vue({
-  el: '#app02-17-1',
-  data: {
-    title: ' Hello from vue 2! '
-  },
-  methods: {
-  	updateFirstTitle: function() {
-  		vue1.title = this.title
-  		vue1.newField = 'New newField!'
+	el: '#app02-17-1',
+	data: {
+		title: 'Hello from vue 2!'
+	},
+	methods: {
+		updateFirstTitle: function() {
+			vue1.title = this.title
+			vue1.newField = 'New newField!'
 
-  		setTimeout(function() {
-  			vue1.alert()
-  		},1000)
-  	}
-  }
-  
+			setTimeout(function() {
+				vue1.alert()
+			},1000)
+		}
+	}
+	
 })
 
 //-----------------------------------------
 // #app02-18
 //-----------------------------------------
-var vue1 = new Vue({
-  el: '#app02-18',
-  data: {
-    title: ' Hello, I am vue! '
-  },
-  methods: {
-  	updateFirstTitle: function() {
-  		this.title = 'New Title!'
-  		// this.$refs.heading.style.color = 'red'
-  		// console.log(this.$refs.heading)
-  		console.log(this.$refs)
-  		// console.log(document.querySelector('hr'))
-  	}
-  }
-  
+new Vue({
+	el: '#app02-18',
+	data: {
+		title: 'Hello, I am vue!'
+	},
+	methods: {
+		updateFirstTitle: function() {
+			this.title = 'New Title!'
+			// this.$refs.heading.style.color = 'red'
+			// console.log(this.$refs.heading)
+			console.log(this.$refs)
+			// console.log(document.querySelector('hr'))
+		}
+	}
+	
 })
+
+//--------------------------------------
+// #app02-19
+//--------------------------------------
+var vue = new Vue({	
+	data: {
+		title: 'Hello, I am vue!'
+	},
+	template: '<div><h1>{{ title }}</h1><p>Подпись</p></div>'		
+});
+
+vue.$mount('#app02-19')
