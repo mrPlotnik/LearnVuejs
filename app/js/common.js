@@ -386,7 +386,7 @@ new Vue({
 
 
 //-----------------------------------------
-// #app02-16
+// #app02-17
 //-----------------------------------------
 var vue1 = new Vue({
   el: '#app02-17',
@@ -416,6 +416,26 @@ new Vue({
   		setTimeout(function() {
   			vue1.alert()
   		},1000)
+  	}
+  }
+  
+})
+
+//-----------------------------------------
+// #app02-18
+//-----------------------------------------
+var vue1 = new Vue({
+  el: '#app02-18',
+  data: {
+    title: ' Hello, I am vue! '
+  },
+  methods: {
+  	updateFirstTitle: function() {
+  		this.title = 'New Title!'
+  		// this.$refs.heading.style.color = 'red'
+  		// console.log(this.$refs.heading)
+  		console.log(this.$refs)
+  		// console.log(document.querySelector('hr'))
   	}
   }
   

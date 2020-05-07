@@ -1,0 +1,14 @@
+.container
+	.row
+		.col-12.bg-light.p-3
+			
+			#app02-18
+
+				h2(ref="heading") {{ title }}
+				button.btn.btn-secondary(@click="updateFirstTitle") Update title
+
+				hr(ref="horLine")
+
+				p ref принимает string
+				br
+				p Название элемента или компонента для регистрации ссылки на него. В объекте $refs появится поле с названием из этого атрибута и значением
