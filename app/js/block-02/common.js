@@ -487,7 +487,5 @@ new Vue({
 			this.$destroy()
 
 		}
-	}
-
-	
+	}	
 })

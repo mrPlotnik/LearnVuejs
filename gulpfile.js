@@ -75,7 +75,8 @@ gulp.task('browser-sync', () => {
 gulp.task('js', () => {
 	return gulp.src([
 		'app/libs/vue/dist/vue.js',
-		'app/js/common.js' // Always at the end
+		'app/js/block-02/common.js',
+		'app/js/block-03/common.js' // Always at the end
 		])		
 		.pipe(gulpIf(isDev, sourceMaps.init()))
 		.pipe(concat('scripts.min.js'))
