@@ -352,7 +352,7 @@ new Vue({
 	}
 })
 
-var vm = new Vue({
+new Vue({
   el: '#app02-16-1',  
   data: {
     firstName: '',
@@ -371,7 +371,7 @@ var vm = new Vue({
   }
 })	
 
-var vm = new Vue({
+new Vue({
   el: '#app02-16-2',
   data: {
     firstName: '',
@@ -382,4 +382,41 @@ var vm = new Vue({
       return this.firstName + ' ' + this.lastName
     }
   }
+})
+
+
+//-----------------------------------------
+// #app02-16
+//-----------------------------------------
+var vue1 = new Vue({
+  el: '#app02-17',
+  data: {
+    title: ' Hello, I am vue! '
+  },
+  methods: {
+  	alert: function() {
+  		alert('I am from vue1')
+  	}
+  }
+  
+})
+
+vue1.newField = 'Random text'
+
+new Vue({
+  el: '#app02-17-1',
+  data: {
+    title: ' Hello from vue 2! '
+  },
+  methods: {
+  	updateFirstTitle: function() {
+  		vue1.title = this.title
+  		vue1.newField = 'New newField!'
+
+  		setTimeout(function() {
+  			vue1.alert()
+  		},1000)
+  	}
+  }
+  
 })

@@ -1,0 +1,20 @@
+.container
+	.row
+		.col-12.bg-light.p-3
+			
+			#app02-17
+
+				h2 {{ title }}
+				h2 {{ newField }}
+				button.btn.btn-secondary(@click="title = 'Update Title'") Update Title
+
+			hr
+
+			#app02-17-1
+
+				h2 {{ title }}
+				button.btn.btn-secondary(@click="updateFirstTitle") Update First Title
+				p Изменяем заголовок другого приложения				
+				p	Изменяем значение добавленного свойства
+				p	после 1 сек вызываем метод первого приложения
+
