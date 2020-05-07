@@ -77,8 +77,10 @@ gulp.task('js', () => {
 		'app/libs/vue/dist/vue.js',
 		'app/js/common.js' // Always at the end
 		])		
+		.pipe(gulpIf(isDev, sourceMaps.init()))
 		.pipe(concat('scripts.min.js'))
 		.pipe(uglify())
+		.pipe(gulpIf(isDev, sourceMaps.write()))
 		.pipe(gulp.dest('dist/js'))
 		.pipe(reload({stream: true}));	// Reload
 });
