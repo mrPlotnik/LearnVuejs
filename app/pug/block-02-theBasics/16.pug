@@ -1,0 +1,41 @@
+.container
+	.row
+		.col-12.bg-light.p-3
+			
+			#app02-16
+
+				h2 Counter {{ counter }}
+				h2 Result: {{ result() }}
+				button.btn.btn-primary(@click="add") Add
+				button.btn.btn-primary(@click="sub") Sub
+				p Vue предоставляет и более общий способ наблюдения и реагирования на изменения данных в экземпляре: слежение за свойствами. Когда есть данные, которые необходимо обновлять при изменении других данных, возникает соблазн избыточно использовать только этот подход, особенно если привыкли к Angular. Но, как правило, лучше использовать вычисляемые свойства, а не императивный коллбэк в watch
+
+				hr
+
+			#app02-16-1 
+
+				h2 {{ fullName }}
+				
+				p
+					b First name: {{ firstName }}
+					input(v-model="firstName" type="text")
+				p
+					b Last name: {{ lastName }}
+					input(v-model="lastName" type="text")
+			
+				p Код выше — императивный и избыточный. Сравните с версией с использованием вычисляемого свойства:
+
+				hr
+
+			#app02-16-2
+
+				h2 {{ fullName }}
+				
+				p
+					b First name: {{ firstName }}
+					input(v-model="firstName" type="text")
+				p
+					b Last name: {{ lastName }}
+					input(v-model="lastName" type="text")
+			
+				p Так гораздо лучше, не правда ли?

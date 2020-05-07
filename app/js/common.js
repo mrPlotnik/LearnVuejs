@@ -324,3 +324,62 @@ new Vue({
 		}
 	}
 })
+
+//-----------------------------------------
+// #app02-16
+//-----------------------------------------
+new Vue({
+	el: '#app02-16', 
+	data: {
+		counter: 0
+	},
+	methods: {
+		add: function() {
+			this.counter++			
+		},	
+		sub: function() {
+			this.counter--			
+		},
+		result: function() {
+			console.log('Result was called')			
+			return this.counter > 3 ? 'More than 3' : 'Less than 3'
+		}		
+	},
+	watch: {
+		counter: function(value) {
+			console.log ('Watch', value)
+		}
+	}
+})
+
+var vm = new Vue({
+  el: '#app02-16-1',  
+  data: {
+    firstName: '',
+    lastName: '',
+    fullName: 'Enter your name'    
+  },
+  watch: {
+    firstName: function (val) {
+    	console.log('First')
+      this.fullName = val + ' ' + this.lastName
+    },
+    lastName: function (val) {
+    	console.log('Last')
+      this.fullName = this.firstName + ' ' + val
+    }
+  }
+})	
+
+var vm = new Vue({
+  el: '#app02-16-2',
+  data: {
+    firstName: '',
+    lastName: ''
+  },
+  computed: {
+    fullName: function () {
+      return this.firstName + ' ' + this.lastName
+    }
+  }
+})
