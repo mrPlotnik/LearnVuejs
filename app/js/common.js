@@ -397,8 +397,7 @@ var vue1 = new Vue({
 		alert: function() {
 			alert('I am from vue1')
 		}
-	}
-	
+	}	
 })
 
 vue1.newField = 'Random text'
@@ -417,8 +416,7 @@ new Vue({
 				vue1.alert()
 			},1000)
 		}
-	}
-	
+	}	
 })
 
 //-----------------------------------------
@@ -437,8 +435,7 @@ new Vue({
 			console.log(this.$refs)
 			// console.log(document.querySelector('hr'))
 		}
-	}
-	
+	}	
 })
 
 //--------------------------------------
@@ -452,3 +449,45 @@ var vue = new Vue({
 });
 
 vue.$mount('#app02-19')
+
+//-----------------------------------------
+// #app02-20
+//-----------------------------------------
+new Vue({
+	el: '#app02-20',
+	data: {
+		title: 'Hello, I am vue!'
+	},
+	beforeCreate: function() {
+		console.log('Before Create')
+	},
+	created: function() {
+		console.log('Created')
+	},
+	beforeMount: function() {
+		console.log('Before Mount')
+	},
+	mounted: function() {
+		console.log('Mounted')
+	},
+	beforeUpdate: function() {
+		console.log('Before Update')
+	},
+	updated: function() {
+		console.log('Updated')
+	},
+	beforeDestroy: function() {
+		console.log('Before Destroy')
+	},
+	destroyed: function() {
+		console.log('Destroyed')
+	},
+	methods: {
+		doDestroy: function() {
+			this.$destroy()
+
+		}
+	}
+
+	
+})
